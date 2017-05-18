@@ -231,7 +231,7 @@
             <div class="center">
                 <div class="phone">Контактный телефон:</div>
                 <div class="num">+7 777 7777 77 77</div>
-                <form id="form" class="form" action="">
+                <form id="form" class="form" action="handler.php">
                     <input class="field name-f" id="name" type="text" placeholder="Ваше имя *">
                     <input class="field num-f" id="num" type="text" placeholder="Номер телефона*">
                     <input class="field mail-f" id="mail" type="text" placeholder="Почта">
@@ -248,12 +248,13 @@
 <article class="callback popup">
     <span class="close" id="callbackCloseBtn"><i class="fa fa-times" aria-hidden="true"></i></span>
 
-    <form action="" id="form-popup" class="form">
+    <form action="handler.php" method="POST" id="form-popup" class="form">
         <h3 class="title"> Заказать звонок </h3>
         <p class="nameText">Введите имя</p>
-        <input type="text" class="textArea name-pop" id="name-pop"/>
+        <input type="text" class="textArea name-pop" name="name" id="name-pop"/>
         <p class="nameText">Введите телефон </p>
-        <input type="text" class="textArea number-pop" id="number-pop"/>
+        <input type="text" class="textArea number-pop" name="phone" id="number-pop"/>
+        <input type="hidden" name="formType" value="callback">
         <input type="submit" value="Заказать звонок" class="submit" id="submit"/>
     </form>
 </article>
