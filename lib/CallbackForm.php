@@ -6,6 +6,7 @@
  * Date: 18.05.17
  * Time: 19:30
  */
+
 require_once('FormAbstract.php');
 
 class CallbackForm extends FormAbstract
@@ -13,9 +14,8 @@ class CallbackForm extends FormAbstract
     public $name;
     public $phone;
 
-    public function __construct(string $formType, string $name, int $phone)
+    public function __construct(string $name, int $phone)
     {
-        parent::__construct($formType);
         $this->name = $name;
         $this->phone = $phone;
     }
