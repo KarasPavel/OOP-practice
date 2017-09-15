@@ -7,11 +7,9 @@
  */
 require_once('lib/CallbackForm.php');
 
-
-$name = trim($_POST['name']);
-$phone = (int)trim($_POST['phone']);
-$formType = trim($_POST['formType']);
-
+$name = isset($_POST['name']) ? trim($_POST['name']) : '';
+$phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
+$formType = isset($_POST['formType']) ? trim($_POST['formType']) : '';
 
 $form = new CallbackForm($name, $phone);
 

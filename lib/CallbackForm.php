@@ -14,7 +14,7 @@ class CallbackForm extends FormAbstract
     public $name;
     public $phone;
 
-    public function __construct(string $name, int $phone)
+    public function __construct(string $name, string $phone)
     {
         $this->name = $name;
         $this->phone = $phone;
