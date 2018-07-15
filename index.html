@@ -231,11 +231,13 @@
             <div class="center">
                 <div class="phone">Контактный телефон:</div>
                 <div class="num">+7 777 7777 77 77</div>
-                <form id="form" class="form" action="handler.php">
-                    <input class="field name-f" id="name" type="text" placeholder="Ваше имя *">
-                    <input class="field num-f" id="num" type="text" placeholder="Номер телефона*">
-                    <input class="field mail-f" id="mail" type="text" placeholder="Почта">
+                <form action="handler.php" method="POST" id="form" class="form" enctype="multipart/form-data">
+                    <input class="field name-f" id="name" type="text" name="name" placeholder="Ваше имя *">
+                    <input class="field num-f" id="num" type="text" name="phone" placeholder="Номер телефона*">
+                    <input class="field mail-f" id="mail" type="text" name="mail" placeholder="Почта">
+                    <input type="file" name="uploadFile"/>
                     <input class="field sub" type="submit" value="Отправить Заявку">
+                    <input type="hidden" name="formType" value="LowerForm">
                 </form>
             </div>
         </div>

@@ -34,6 +34,7 @@ class CallbackForm extends FormAbstract
 
     public function send()
     {
+        echo 'Форма успешно отправлена!<br>';
         echo 'Name: ' . $this->name;
         echo '<br>';
         echo 'Phone: ' . $this->phone;
